@@ -54,7 +54,7 @@ const projects=[
     image:portfolio,
     name:"Portfolio Website",
     link:"https://github.com/Pratik1603/Portfolio",
-    about:"This project is  a portfolio website made in threeJs . This project uses blender to make 3d models so that it looks interactive . It have complate details of me.",
+    about:"This project is  a portfolio website made in threeJs . This project uses blender to make 3d models so that it looks interactive . It have complete details of me.",
   },
   {
     image:fabrest,
@@ -502,7 +502,7 @@ const ProjectsSection = () => {
             My Works
           </div>
          <div className="md:w-[65%] md:text-lg  text-sm w-[80%]  text-[#0f0a23]  ">
-            Following projects showcase my skills and experience through real-world examples of my work . Each project is briefly described with links to code repositories and demo . It reflects my ability to solve complex problems ,work with different technologies and manage prject effectively . 
+            Following projects showcase my skills and experience through real-world examples of my work . Each project is briefly described with links to code repositories and demo . It reflects my ability to solve complex problems ,work with different technologies and manage project effectively . 
          </div>
 
         </div>

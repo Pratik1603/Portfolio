@@ -27,7 +27,8 @@ import connect2 from "../assets/connect2.png";
 import FIR from "../assets/arrestedHands.png";
 import chat from "../assets/chatD.png";
 import supply from "../assets/supplyChain.png";
-import fabrest from "../assets/fabrest.png"
+import fabrest from "../assets/fabrest.png";
+import portfolio from "../assets/portfolio.png";
 import { TypeAnimation } from 'react-type-animation';
 
 const projects=[
@@ -48,6 +49,12 @@ const projects=[
     name:"Supply Chain Daap",
     link:"https://github.com/Pratik1603/SupplyChainDapp",
     about:"This project helps streamline and enhance the efficiency, transparency, and trust in supply chain management processes. It has benefits of decentralization, such as immutability, transparency, and traceability.",
+  },
+  {
+    image:portfolio,
+    name:"Portfolio Website",
+    link:"https://github.com/Pratik1603/Portfolio",
+    about:"This project is  a portfolio website made in threeJs . This project uses blender to make 3d models so that it looks interactive . It have complate details of me.",
   },
   {
     image:fabrest,

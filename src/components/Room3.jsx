@@ -17,6 +17,7 @@ export function Model(props) {
         <mesh geometry={nodes.iMac_1001.geometry} material={materials['Mat.008']} />
         <mesh geometry={nodes.iMac_1001_1.geometry} material={materials['Material.004']}  />
       </group>
+     
       <group position={[-2.179, 1.692, -0.917]} rotation={[0, 0.803, 0]} scale={0.205}>
         <mesh geometry={nodes['Keyboard001|group1030983910|Dupli|22'].geometry} material={materials['mat21.013']} />
         <mesh geometry={nodes['Keyboard001|group1075691498|Dupli|58'].geometry} material={materials['mat21.013']} />

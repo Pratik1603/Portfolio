@@ -29,7 +29,16 @@ import chat from "../assets/chatD.png";
 import supply from "../assets/supplyChain.png";
 import fabrest from "../assets/fabrest.png";
 import portfolio from "../assets/portfolio.png";
+// import pdf from "../Resume_PratikGuptaG.pdf";
 import { TypeAnimation } from 'react-type-animation';
+
+
+const handleDownload = () => {
+  const link = document.createElement('a');
+  link.href = '/Resume_PratikGupta.pdf';
+  link.download = 'Resume_PratikGupta.pdf';
+  link.click();
+};
 
 const projects=[
   {
@@ -441,10 +450,10 @@ const SkillsSection = () => {
               <div className="shadow-2xl border-2 text-center mx-auto  h-10 w-[100%] md:w-[60%] flex flex-col justify-center mt-[8%] md:mt-[3%] border-white bg-[#1912e77a] font-bold p-[4%] rounded-2xl">
                 Resume 
               </div>
-              <div className="w-[50%] md:w-[25%] h-16 mx-auto p-[1%] mt-[20%] md:mt-[10%] shadow-2xl bg-[#f0eff4c5] text-[#16163f] font-bold rounded-xl animate-bounce">
-              <a href="../assets/solidity.png" download>
+              <div className="w-[50%] md:w-[25%] h-16 mx-auto p-[1%] mt-[20%] md:mt-[10%] shadow-2xl bg-[#f0eff4c5] text-[#16163f] font-bold rounded-xl animate-bounce" onClick={()=>handleDownload()}>
+              {/* <a href="../assets/solidity.png" download> */}
                 <img src={download}  className=" w-20 h-16"/>
-              </a>
+              {/* </a> */}
               </div>  
               
             </div>

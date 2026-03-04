@@ -1,12 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #6366f1;
+  /* Indigo 500 */
+  --color-secondary: #ec4899;
+  /* Pink 500 */
+  --color-bg-glass: rgba(255, 255, 255, 0.1);
+  --color-text-main: #1f2937;
+  --color-text-muted: #4b5563;
+}
+
+/* Ensure full screen canvas */
+html,
+body,
 #root {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Prevent native scroll, we use ScrollControls */
 }
 
 body {
-  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #e6e7ff;
+  /* Match 3D scene background just in case */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
 }

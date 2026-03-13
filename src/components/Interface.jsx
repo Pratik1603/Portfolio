@@ -37,6 +37,8 @@ import dockerLogo from "../assets/Docker.png";
 import kafkaLogo from "../assets/kafka.png";
 import azure from "../assets/azure.jpg";
 import d365 from "../assets/d365.jpg";
+import goStream from "../assets/GO-Stream.png";
+import accessAnalyser from "../assets/AccessAnalyse.png";
 // import pdf from "../Resume_PratikGuptaG.pdf";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -49,6 +51,18 @@ const handleDownload = () => {
 };
 
 const projects = [
+  {
+    image: goStream,
+    name:"GoStream",
+    link:"https://github.com/Pratik1603/GO-STREAM-AWS-",
+    about:"A high-performance movie streaming application with a Go backend deployed on AWS Lambda,"
+  },
+  {
+    image: accessAnalyser,
+    name:"AccessAnalyser",
+    link:"https://github.com/Pratik1603/Accessiblity-Analyzer",
+    about:"Full-stack web accessibility analyzer automating WCAG 2.1 compliance testing across 8+ categories(ARIA, color contrast, keyboard navigation)"
+  },
   {
     image: FIR,
     name: "Report Safe Daap",

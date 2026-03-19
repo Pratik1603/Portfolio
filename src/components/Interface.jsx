@@ -39,6 +39,7 @@ import azure from "../assets/azure.jpg";
 import d365 from "../assets/d365.jpg";
 import goStream from "../assets/GO-Stream.png";
 import accessAnalyser from "../assets/AccessAnalyse.png";
+import CICD from "../assets/CICD.png";
 // import pdf from "../Resume_PratikGuptaG.pdf";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -52,16 +53,22 @@ const handleDownload = () => {
 
 const projects = [
   {
+    image: CICD,
+    name: "Full-Stack CI/CD Pipeline: Automated AWS Deployment",
+    link: "https://github.com/Pratik1603/CI_CD_Pipeline_AWS_Project",
+    about: "This project is a comprehensive demonstration of a Full-Stack CI/CD Pipeline, showcasing the automated delivery of a three-tier application (Nexus Messages) from code to production"
+  },
+  {
     image: goStream,
-    name:"GoStream",
-    link:"https://github.com/Pratik1603/GO-STREAM-AWS-",
-    about:"A high-performance movie streaming application with a Go backend deployed on AWS Lambda,"
+    name: "GoStream",
+    link: "https://github.com/Pratik1603/GO-STREAM-AWS-",
+    about: "A high-performance movie streaming application with a Go backend deployed on AWS Lambda,"
   },
   {
     image: accessAnalyser,
-    name:"AccessAnalyser",
-    link:"https://github.com/Pratik1603/Accessiblity-Analyzer",
-    about:"Full-stack web accessibility analyzer automating WCAG 2.1 compliance testing across 8+ categories(ARIA, color contrast, keyboard navigation)"
+    name: "AccessAnalyser",
+    link: "https://github.com/Pratik1603/Accessiblity-Analyzer",
+    about: "Full-stack web accessibility analyzer automating WCAG 2.1 compliance testing across 8+ categories(ARIA, color contrast, keyboard navigation)"
   },
   {
     image: FIR,
@@ -200,9 +207,8 @@ const Section = (props) => {
   return (
     <motion.section
       className={`
-  h-screen w-screen p-8 max-w-screen-2xl mx-auto
-  flex flex-col items-start
-  ${mobileTop ? "justify-start md:justify-center" : "justify-center"}
+  h-screen w-screen p-4 md:p-8 max-w-screen-2xl mx-auto
+  flex flex-col items-start justify-start md:justify-center
   `}
       initial={{
         opacity: 0,
@@ -265,18 +271,18 @@ const ExperienceSection = () => {
   return (
     <Section mobileTop>
       <motion.div
-        className="w-full h-full md:w-[60%] ml-auto pl-4 md:pl-0 flex flex-col justify-start pt-24"
+        className="w-full md:w-[60%] ml-auto pl-0 flex flex-col justify-start pt-24 md:pt-24"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h2 className="text-6xl md:text-7xl font-extrabold pb-2 mb-10 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-7xl font-extrabold pb-2 mb-4 md:mb-10 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">
           Experience
         </h2>
 
         <div
           ref={scrollRef}
-          className="overflow-y-auto pr-6 pb-20 h-[calc(100vh-250px)] pointer-events-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="overflow-y-auto pr-6 pb-20 h-[calc(100vh-150px)] md:h-[calc(100vh-250px)] pointer-events-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           onWheel={(e) => e.stopPropagation()}
         >
           <div className="space-y-10 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-[2px] before:bg-gradient-to-b before:from-indigo-500/20 before:via-indigo-500/50 before:to-indigo-500/20">
@@ -339,7 +345,7 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mt-12 md:mt-0 text-slate-900 tracking-tight">
+      <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mt-20 md:mt-0 text-slate-900 tracking-tight">
         Hi, I'm
         <br />
         <span className="bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent italic px-1">
@@ -409,33 +415,33 @@ const SkillsSection = () => {
 
   return (
     <Section>
-      <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-10">
+      <div className="w-full h-full flex flex-col md:flex-row items-center justify-start md:justify-center gap-10 pt-20 md:pt-0">
 
         {/* Left Side: Personal Info Card */}
         <motion.div
-          className="w-full md:w-1/3 bg-white/30 backdrop-blur-xl p-8 rounded-3xl border border-white/40 shadow-2xl"
+          className="w-full md:w-1/3 bg-white/30 backdrop-blur-xl p-3 md:p-8 rounded-2xl md:rounded-3xl border border-white/40 shadow-2xl"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-3xl font-bold mb-6 text-indigo-100/90 border-b border-white/30 pb-4">Profile</h3>
-          <div className="space-y-4">
-            <div className="flex justify-between items-center bg-indigo-900/40 p-3 rounded-lg border border-white/20">
-              <span className="font-semibold text-indigo-100/90">Name</span>
-              <span className="font-bold text-white">Pratik Gupta</span>
+          <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-6 text-indigo-100/90 border-b border-white/30 pb-1 md:pb-4">Profile</h3>
+          <div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:space-y-4">
+            <div className="flex justify-between items-center bg-indigo-900/40 p-2 md:p-3 rounded-lg border border-white/20">
+              <span className="text-[10px] md:text-base font-semibold text-indigo-100/90">Name</span>
+              <span className="text-[10px] md:text-base font-bold text-white">Pratik Gupta</span>
             </div>
-            <div className="flex justify-between items-center bg-indigo-900/40 p-3 rounded-lg border border-white/20">
-              <span className="font-semibold text-indigo-100/90">Age</span>
-              <span className="font-bold text-white">{age} Yrs</span>
+            <div className="flex justify-between items-center bg-indigo-900/40 p-2 md:p-3 rounded-lg border border-white/20">
+              <span className="text-[10px] md:text-base font-semibold text-indigo-100/90">Age</span>
+              <span className="text-[10px] md:text-base font-bold text-white">{age} Yrs</span>
             </div>
-            <div className="flex justify-between items-center bg-indigo-900/40 p-3 rounded-lg border border-white/20">
-              <span className="font-semibold text-indigo-100/90">From</span>
-              <span className="font-bold text-white">Gurugram, India</span>
+            <div className="flex justify-between items-center bg-indigo-900/40 p-2 md:p-3 rounded-lg border border-white/20 col-span-2">
+              <span className="text-[10px] md:text-base font-semibold text-indigo-100/90">From</span>
+              <span className="text-[10px] md:text-base font-bold text-white">Gurugram, India</span>
             </div>
-            <div className="bg-indigo-900/40 p-4 rounded-lg mt-4 border border-white/20">
-              <span className="font-semibold text-indigo-100/90 block mb-1">Education</span>
-              <span className="text-sm text-white/90 font-medium">B.Tech CSE, IIIT Sonepat (2021-2025)</span>
-            </div>
+          </div>
+          <div className="bg-indigo-900/40 p-2 md:p-4 rounded-lg mt-2 md:mt-4 border border-white/20">
+            <span className="text-[10px] md:text-sm font-semibold text-indigo-100/90 block">Education</span>
+            <span className="text-[9px] md:text-sm text-white/90 font-medium">B.Tech CSE, IIIT Sonepat (2021-2025)</span>
           </div>
         </motion.div>
 
@@ -443,22 +449,22 @@ const SkillsSection = () => {
         <motion.div
           className="w-full md:w-1/2"
           initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-4xl font-bold mb-8 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Skills & Tech</h3>
-          <div className="flex flex-wrap gap-4">
+          <h3 className="text-xl md:text-4xl font-bold mb-2 md:mb-8 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Skills & Tech</h3>
+          <div className="grid grid-cols-5 md:flex md:flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
             {technologies.map((tech) => (
-              <div key={tech.name} className="w-20 h-20 md:w-24 md:h-24 bg-white/30 backdrop-blur-lg rounded-2xl flex flex-col items-center justify-center p-2 border border-white/50 transition-all duration-300 hover:scale-110 shadow-xl cursor-pointer hover:bg-white/50 group">
-                <div className="w-10 h-10 md:w-12 md:h-12 mb-2">
+              <div key={tech.name} className="w-14 h-14 md:w-24 md:h-24 bg-white/30 backdrop-blur-lg rounded-xl md:rounded-2xl flex flex-col items-center justify-center p-1 md:p-2 border border-white/50 transition-all duration-300 hover:scale-110 shadow-xl cursor-pointer hover:bg-white/50 group">
+                <div className="w-6 h-6 md:w-12 md:h-12 mb-1">
                   <BallCanvas icon={tech.icon} />
                 </div>
-                <span className="text-[10px] md:text-xs font-bold text-white text-center drop-shadow-md group-hover:text-indigo-900 transition-colors">{tech.name}</span>
+                <span className="text-[7px] md:text-xs font-bold text-white text-center drop-shadow-md group-hover:text-indigo-900 transition-colors">{tech.name}</span>
               </div>
             ))}
           </div>
-          <div className="mt-8 flex gap-4">
-            <a href="../assets/Pratik_s_Resume_SDE_1-2.pdf" download className="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-slate-800 transition-colors shadow-xl">
+          <div className="mt-4 flex gap-4 justify-center md:justify-start">
+            <a href="../assets/Pratik_s_Resume_SDE_1-2.pdf" download className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 md:px-6 md:py-3 rounded-xl font-bold hover:bg-slate-800 transition-colors shadow-xl text-sm md:text-base">
               <img src={download} className="w-5 h-5 filter invert" alt="down" />
               Download CV
             </a>
@@ -493,13 +499,13 @@ const ProjectsSection = () => {
   return (
     <Section>
       <motion.div
-        className="w-full h-full flex flex-col justify-center pointer-events-none"
+        className="w-full h-full flex flex-col justify-start md:justify-center pointer-events-none pt-24 md:pt-0 pb-32"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
         {/* Container aligned to the RIGHT to leave space for Avatar on the LEFT */}
-        <div className="w-full md:w-[85%] ml-auto pl-4 md:pl-0 pointer-events-auto">
+        <div className="w-full md:w-[85%] ml-auto pl-0 md:pl-0 pointer-events-auto">
 
           <div className="mb-8">
             <h2 className="text-5xl font-bold text-slate-900 mb-4">My Works</h2>
@@ -516,18 +522,18 @@ const ProjectsSection = () => {
               autoPlaySpeed={4000}
               keyBoardControl={true}
               containerClass="carousel-container pb-12"
-              itemClass="px-3"
+              itemClass="px-1 md:px-3"
               showDots={true}
               removeArrowOnDeviceType={["tablet", "mobile"]}
             >
               {projects.map((project) => (
                 <motion.div
                   key={project.name}
-                  className="bg-white/40 backdrop-blur-xl border border-white/50 p-6 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all duration-300 h-[420px] flex flex-col group cursor-pointer"
+                  className="bg-white/40 backdrop-blur-xl border border-white/50 p-4 md:p-6 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all duration-300 h-[350px] md:h-[420px] flex flex-col group cursor-pointer"
                   whileHover={{ y: -8 }}
                 >
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="h-full flex flex-col">
-                    <div className="h-44 rounded-2xl overflow-hidden mb-5 border border-white/30 relative">
+                    <div className="h-32 md:h-44 rounded-2xl overflow-hidden mb-3 md:mb-5 border border-white/30 relative">
                       <div className="absolute inset-0 bg-indigo-900/0 group-hover:bg-indigo-900/10 transition-colors duration-300"></div>
                       <img src={project.image} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" alt={project.name} />
                     </div>
@@ -556,12 +562,12 @@ const ContactSection = () => {
   const [state, handleSubmit] = useForm("xjvqvdke");
   return (
     <Section>
-      <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full flex items-start md:items-center justify-center pt-20 md:pt-0">
         {/* Adjusted wrapper: Removed bg/blur/border/shadow, kept layout structure */}
         <div className="w-full max-w-5xl p-4 md:p-8 flex flex-col md:flex-row gap-8 relative">
 
           {/* Form Side - Aligned Left with Glassmorphism */}
-          <div className="w-full md:w-1/2 z-10 p-8 bg-white/30 backdrop-blur-lg rounded-[2rem] border border-white/40 shadow-2xl">
+          <div className="w-full md:w-1/2 z-10 p-4 md:p-8 bg-white/30 backdrop-blur-lg rounded-[2rem] border border-white/40 shadow-2xl">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-2">Let's Connect</h2>
             <p className="text-slate-600 mb-6 font-medium">Have a project in mind? Send me a message.</p>
 

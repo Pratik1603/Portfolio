@@ -96,7 +96,7 @@ export const Experience = (props) => {
       const y = startY + (endY - startY) * scrollOffset;
 
       // Horizontal Movement (Sine Wave)
-      const amplitude = isMobile ? 1.5 : 5;
+      const amplitude = isMobile ? 0.8 : 5;
       const frequency = 3 * Math.PI;
       const x = amplitude * Math.sin(frequency * scrollOffset - Math.PI / 2);
 
@@ -138,14 +138,14 @@ export const Experience = (props) => {
           },
           1: {
             y: isMobile ? -viewport.height + 0.5 : -viewport.height + 1.3,
-            x: isMobile ? 0.3 : viewport.width * (0.09),
+            x: isMobile ? 1.0 : viewport.width * (0.09),
             z: 7,
             rotateX: 0,
             rotateY: isMobile ? -Math.PI / 2 : -Math.PI / 4,
             rotateZ: 0,
-            scaleX: isMobile ? 1.2 : 0.95,
-            scaleY: isMobile ? 1.2 : 0.95,
-            scaleZ: isMobile ? 1.2 : 0.95,
+            scaleX: isMobile ? 1.0 : 0.95,
+            scaleY: isMobile ? 1.0 : 0.95,
+            scaleZ: isMobile ? 1.0 : 0.95,
           },
           2: {
             x: isMobile ? 1.5 : viewport.width * 0.25,
@@ -159,15 +159,15 @@ export const Experience = (props) => {
             scaleZ: 0,
           },
           3: {
-            x: isMobile ? 1.4 : viewport.width * -0.35,
+            x: isMobile ? -1.5 : viewport.width * -0.35,
             y: isMobile ? -viewport.height * 3.12 + 0.5 : -viewport.height * 3.32 + 0.3,
             z: 2,
             rotateX: 0,
-            rotateY: menuOpened ? Math.PI / 8 : Math.PI / 4,
+            rotateY: isMobile ? Math.PI / 4 : (menuOpened ? Math.PI / 8 : Math.PI / 4),
             rotateZ: 0,
-            scaleX: isMobile ? 1.5 : 2,
-            scaleY: isMobile ? 1.5 : 2,
-            scaleZ: isMobile ? 1.5 : 2,
+            scaleX: isMobile ? 1.2 : 2,
+            scaleY: isMobile ? 1.2 : 2,
+            scaleZ: isMobile ? 1.2 : 2,
           },
           4: {
             y: -viewport.height * 3.98 + 1,
@@ -189,8 +189,8 @@ export const Experience = (props) => {
       <ambientLight intensity={0.2} />
       <motion.group
         position={[
-          isMobile ? -0.6 * officeScaleRatio : 0.3 * officeScaleRatio,
-          isMobile ? -viewport.height / 8 : 5,
+          isMobile ? 0 : 0.3 * officeScaleRatio,
+          isMobile ? viewport.height / 6 : 5,
           isMobile ? 5 : 8,
         ]}
         scale={[officeScaleRatio, officeScaleRatio, officeScaleRatio]}
@@ -210,11 +210,11 @@ export const Experience = (props) => {
 
       {/* Experience Section 3D Building */}
       <motion.group
-        position={[isMobile ? -viewport.width / 4 : -4, -viewport.height * 2 - 1, 3]}
+        position={[isMobile ? 0 : -4, isMobile ? -viewport.height * 2 + viewport.height / 3 : -viewport.height * 2 - 1, 3]}
         rotation-y={Math.PI / 4}
         animate={{
-          y: section === 2 ? -viewport.height * 2 - 1 : -viewport.height * 2 - 1.5,
-          scale: section === 2 ? 0.6 : 0,
+          y: section === 2 ? (isMobile ? -viewport.height * 2 + viewport.height / 3 : -viewport.height * 2 - 1) : -viewport.height * 2 - 1.5,
+          scale: section === 2 ? (isMobile ? 0 : 0.6) : 0,
           opacity: section === 2 ? 1 : 0,
         }}
         transition={{
